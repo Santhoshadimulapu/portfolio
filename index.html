@@ -419,7 +419,7 @@
 
   /* Education */
   .education { background: #080808; border-top: 1px solid var(--border); }
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
   .edu-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -721,7 +721,7 @@
   <h1 class="hero-name">Santhosh<br><span>Adimulapu</span></h1>
   <div class="hero-sub">
     <div class="hero-line"></div>
-    <p>Backend & full-stack developer building production-grade systems — JWT auth, Redis concurrency, real-time WebSocket platforms.</p>
+    <p>Backend & full-stack developer building production-grade, AI-enabled systems — Redis concurrency, real-time WebSocket platforms, ML-powered features.</p>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -762,16 +762,16 @@
       <div class="section-label reveal">About</div>
       <div class="about-stats stagger">
         <div class="stat-item">
-          <div class="stat-num">8<span>.</span>08</div>
+          <div class="stat-num">8<span>.</span>18</div>
           <div class="stat-desc">CGPA at Anurag University</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">160<span>+</span></div>
+          <div class="stat-num">170<span>+</span></div>
           <div class="stat-desc">DSA Problems Solved</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">2<span></span></div>
-          <div class="stat-desc">Production Systems Shipped</div>
+          <div class="stat-num">3<span></span></div>
+          <div class="stat-desc">Projects Built</div>
         </div>
       </div>
     </div>
@@ -823,6 +823,8 @@
         <span class="tag">REST APIs</span>
         <span class="tag">JWT Auth</span>
         <span class="tag">Socket.IO</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">SQLAlchemy</span>
       </div>
     </div>
     <div class="skill-block">
@@ -839,14 +841,16 @@
       <div class="skill-name">Frontend</div>
       <div class="skill-tags">
         <span class="tag">React.js</span>
-        <span class="tag">Tailwind CSS</span>
+        <span class="tag">CSS</span>
       </div>
     </div>
     <div class="skill-block">
       <span class="skill-num">05</span>
       <div class="skill-name">DevOps & Tooling</div>
       <div class="skill-tags">
-        <span class="tag">Docker</span>
+        <span class="tag">Docker (Basic)</span>
+        <span class="tag">GitHub Actions</span>
+        <span class="tag">VS Code</span>
         <span class="tag">Git</span>
         <span class="tag">Postman</span>
         <span class="tag">Render</span>
@@ -872,15 +876,37 @@
   <div class="section-title reveal">Projects<br>shipped.</div>
 
   <div class="projects-list">
-    <a class="project-item reveal" href="https://hospital-mini-project.vercel.app/" target="_blank">
+    <a class="project-item reveal" href="https://github.com/Santhoshadimulapu" target="_blank">
       <div class="project-num">01</div>
+      <div class="project-body">
+        <h3 class="project-name">Climate-Resilient Agriculture Platform</h3>
+        <p class="project-desc">An AI-powered advisory platform that turns soil photos, environmental data, and farmer queries into personalized farming decisions — in English, Telugu, and Hindi. In progress since Aug 2026.</p>
+        <div class="project-highlights">
+          <span class="highlight-item">AI soil scanner for soil health classification from photos</span>
+          <span class="highlight-item">Crop selection, fertilizer recommendations, and yield predictions</span>
+          <span class="highlight-item">Context-aware chatbot with real-time weather integration</span>
+          <span class="highlight-item">Multilingual support to remove language barriers for rural farmers</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">FastAPI</span>
+          <span class="tech-pill">SQLAlchemy</span>
+          <span class="tech-pill">Python</span>
+        </div>
+      </div>
+      <div class="project-arrow">↗</div>
+    </a>
+
+    <a class="project-item reveal" href="https://hospital-mini-project.vercel.app/" target="_blank">
+      <div class="project-num">02</div>
       <div class="project-body">
         <h3 class="project-name">Hospital Queue Management System</h3>
         <p class="project-desc">A full-stack hospital platform covering appointment booking, doctor scheduling, and patient management — built to handle concurrent users without conflicts.</p>
         <div class="project-highlights">
           <span class="highlight-item">Eliminated 95% of duplicate booking conflicts via MySQL transactional locking</span>
           <span class="highlight-item">Redis distributed slot locking with automatic TTL — solves race conditions under load</span>
-          <span class="highlight-item">JWT + RBAC for Patient, Doctor, and Admin workflows</span>
+          <span class="highlight-item">Real-time queue wait-time estimates for patients</span>
+          <span class="highlight-item">JWT + RBAC with role-based dashboards for Patient, Doctor, and Admin</span>
           <span class="highlight-item">Distributed deployment: Render · Vercel · Railway</span>
         </div>
         <div class="project-tech">
@@ -896,12 +922,12 @@
     </a>
 
     <a class="project-item reveal" href="https://study-collab-lake.vercel.app/" target="_blank">
-      <div class="project-num">02</div>
+      <div class="project-num">03</div>
       <div class="project-body">
         <h3 class="project-name">StudyCollab — Real-Time Study Rooms</h3>
-        <p class="project-desc">A real-time collaboration platform for multi-user study sessions with live chat, file sharing, and persistent messaging — handling 100+ concurrent WebSocket connections.</p>
+        <p class="project-desc">A real-time collaboration platform for multi-user study sessions with live chat, file sharing, and persistent messaging — handling 1000+ concurrent WebSocket connections.</p>
         <div class="project-highlights">
-          <span class="highlight-item">100+ concurrent WebSocket connections with low-latency Socket.IO</span>
+          <span class="highlight-item">1000+ concurrent WebSocket connections with low-latency Socket.IO</span>
           <span class="highlight-item">Graceful handling of connection drops and session reconnection</span>
           <span class="highlight-item">JWT session auth with role-driven room access control</span>
           <span class="highlight-item">RESTful backend for room lifecycle and persistent messages</span>
@@ -930,7 +956,7 @@
       <div class="edu-year">2023 → 2027</div>
       <div class="edu-degree">B.Tech — AI & Machine Learning</div>
       <div class="edu-institution">Anurag University, Hyderabad</div>
-      <div class="edu-grade">8.08</div>
+      <div class="edu-grade">8.18</div>
       <div class="edu-grade-label">CGPA</div>
     </div>
     <div class="edu-card">
@@ -938,6 +964,13 @@
       <div class="edu-degree">Intermediate (Class XII)</div>
       <div class="edu-institution">Sri Chaitanya Junior College</div>
       <div class="edu-grade">89.5%</div>
+      <div class="edu-grade-label">Percentage</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-year">2020 → 2021</div>
+      <div class="edu-degree">SSC (Class X)</div>
+      <div class="edu-institution">Sri Chaitanya School</div>
+      <div class="edu-grade">100%</div>
       <div class="edu-grade-label">Percentage</div>
     </div>
   </div>
@@ -950,24 +983,60 @@
   <div class="certs-list reveal">
     <div class="cert-item">
       <div>
+        <div class="cert-name">Agentblazer Champion 2025</div>
+        <div class="cert-issuer">Salesforce Trailhead · 19+ Agentforce badges completed</div>
+      </div>
+      <span class="cert-badge">Salesforce</span>
+    </div>
+    <div class="cert-item">
+      <div>
+        <div class="cert-name">AWS Academy Graduate — Cloud Foundations</div>
+        <div class="cert-issuer">AWS Academy · Sep 2026</div>
+      </div>
+      <span class="cert-badge">AWS</span>
+    </div>
+    <div class="cert-item">
+      <div>
+        <div class="cert-name">IBM AI Fundamentals</div>
+        <div class="cert-issuer">IBM SkillsBuild · 2026</div>
+      </div>
+      <span class="cert-badge">IBM</span>
+    </div>
+    <div class="cert-item">
+      <div>
         <div class="cert-name">Google AI/ML Virtual Internship</div>
-        <div class="cert-issuer">AICTE · Practical ML & AI through structured industry projects</div>
+        <div class="cert-issuer">AICTE · Practical ML &amp; AI through structured industry projects</div>
       </div>
       <span class="cert-badge">AICTE</span>
     </div>
     <div class="cert-item">
       <div>
         <div class="cert-name">Introduction to Machine Learning</div>
-        <div class="cert-issuer">NPTEL · Elite grade — supervised & unsupervised learning, model evaluation</div>
+        <div class="cert-issuer">NPTEL · Elite grade — supervised &amp; unsupervised learning, model evaluation</div>
       </div>
       <span class="cert-badge">Elite</span>
     </div>
+  </div>
+</section>
+
+<!-- Club Activities -->
+<section class="certs">
+  <div class="section-label reveal">Community</div>
+  <div class="section-title reveal">Club activity.</div>
+  <div class="certs-list reveal">
     <div class="cert-item">
       <div>
-        <div class="cert-name">Data Structures & Algorithms</div>
-        <div class="cert-issuer">Infosys Springboard · Arrays, trees, graphs, dynamic programming</div>
+        <div class="cert-name">Content Team Member — Coding Cubs</div>
+        <div class="cert-issuer">Anurag University · Blog posts, problem editorials &amp; workshop guides for 200+ members</div>
       </div>
-      <span class="cert-badge">Infosys</span>
+      <span class="cert-badge">200+ readers</span>
+    </div>
+    <div class="cert-item">
+      <div>
+        <div class="cert-name">Workshops &amp; Contests</div>
+        <div class="cert-issuer">Organized hands-on coding workshops and competitive programming events</div>
+      </div>
+      <span class="cert-badge">Organizer</span>
     </div>
   </div>
 </section>
